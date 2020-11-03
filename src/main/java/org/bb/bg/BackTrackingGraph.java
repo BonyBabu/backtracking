@@ -279,7 +279,7 @@ public class BackTrackingGraph<T, L> {
                 String edgeId = getEdgeId(sourceSliceIndex, sourceNodeIndex, destinationSliceIndex, destinationNodeIndex);
                 GraphNode sourceNode = sourceSliceNodes.get(sourceNodeIndex);
                 GraphNode destinationNode = destinationSliceNodes.get(destinationNodeIndex);
-                GraphEdge graphEdge = new GraphEdge(sourceNode, destinationNode, sourceSliceIndex, destinationSliceIndex);
+                GraphEdge graphEdge = new GraphEdge(sourceNode, destinationNode);
                 sourceNode.addOutgoingEdge(graphEdge);
                 destinationNode.addIncomingEdge(graphEdge);
                 this.edges.put(edgeId, graphEdge);
